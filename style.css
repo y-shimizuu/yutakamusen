@@ -242,6 +242,7 @@ p{ margin:0; }
 @media (max-width:640px){ .photo-gallery{ grid-template-columns:1fr; } }
 
 .card{
+  position:relative;
   background:var(--color-surface); border:1px solid var(--color-border);
   border-radius:var(--radius-md); padding:clamp(1.5rem,2.6vw,2rem);
   transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
@@ -258,8 +259,9 @@ p{ margin:0; }
 .card ul li::before{ content:"—"; position:absolute; left:0; color:var(--color-accent-2,var(--color-accent)); }
 
 .badge-new{
-  display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.06em;
-  background:var(--color-accent); color:#0b2444; padding:.25rem .55rem; border-radius:6px; margin-bottom:.75rem;
+  position:absolute; top:clamp(1.5rem,2.6vw,2rem); right:clamp(1.5rem,2.6vw,2rem);
+  font-size:.68rem; font-weight:800; letter-spacing:.06em;
+  background:var(--color-accent); color:#0b2444; padding:.25rem .55rem; border-radius:6px;
 }
 .theme-kscovo .badge-new{ color:#2c1c11; }
 
